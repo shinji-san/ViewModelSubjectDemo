@@ -1,5 +1,6 @@
-namespace ViewModelSubjectDemo;
+namespace ViewModelSubjectDemo.ViewModel;
 
+using Message;
 using ViewModelSubject;
 
 public class SubjectViewModel : IDisposable
@@ -17,17 +18,17 @@ public class SubjectViewModel : IDisposable
 
     public void Send(bool newValue)
     {
-        this.subject.Notify<BoolTestMessage, bool, string>("s", new BoolTestMessage(newValue));
+        this.subject.Notify<BoolTestMessage, bool, string>(ChannelIdentifier, new BoolTestMessage(newValue));
     }
     
     public void Send(int newValue)
     {
-        this.subject.Notify<IntTestMessage, int, string>("s", new IntTestMessage(newValue));
+        this.subject.Notify<IntTestMessage, int, string>(ChannelIdentifier, new IntTestMessage(newValue));
     }
     
     public void Send()
     {
-        this.subject.Notify<UnitMessage, Unit, string>("s", new UnitMessage(Unit.Default));
+        this.subject.Notify<UnitMessage, Unit, string>(ChannelIdentifier, new UnitMessage(Unit.Default));
     }
     
     private void Receive(IntTestMessage newMessage)

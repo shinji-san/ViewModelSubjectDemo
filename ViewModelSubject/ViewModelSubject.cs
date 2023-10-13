@@ -39,7 +39,12 @@ public sealed class ViewModelSubject : IViewModelSubject
             return;
         }
 
-        var subscription = subscriptions.FirstOrDefault(subscription => (subscription as Subscription<TToken>)?.Subscriber == subscriber);
+        var subscription = subscriptions.FirstOrDefault(currentSubscription =>
+        {
+            var subscription = currentSubscription as Subscription<TToken>;
+            return subscription?.Subscriber == subscriber && subscription.Token.Equals(token);
+        });
+
         if (subscription != null)
         {
             subscriptions.Remove(subscription);
@@ -56,9 +61,9 @@ public sealed class ViewModelSubject : IViewModelSubject
             return;
         }
 
-        foreach (var subscription in subscriptions)
+        foreach (Subscription<TToken> subscription in subscriptions)
         {
-            if ((subscription as Subscription<TToken>)?.Action is Action<TMessage> action)
+            if (subscription?.Action is Action<TMessage> action && subscription.Token.Equals(token))
             {
                 action(newMessage);
             }

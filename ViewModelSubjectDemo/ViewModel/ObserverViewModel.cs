@@ -1,5 +1,6 @@
-namespace ViewModelSubjectDemo;
+namespace ViewModelSubjectDemo.ViewModel;
 
+using Message;
 using ViewModelSubject;
 
 public class ObserverViewModel : IDisposable

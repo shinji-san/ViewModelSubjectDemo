@@ -1,4 +1,4 @@
-namespace ViewModelSubjectDemo;
+namespace ViewModelSubjectDemo.Message;
 
 using ViewModelSubject;
 
