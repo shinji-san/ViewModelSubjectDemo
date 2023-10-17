@@ -4,5 +4,5 @@ using Messaging;
 
 public sealed record OtherIntTestMessage(int Value) : IMessage<int>
 {
-    object IMessage.Value => ((IMessage)this).Value;
+    object IMessage.Value => Value;
 }
