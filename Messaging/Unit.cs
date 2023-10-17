@@ -1,4 +1,4 @@
-namespace ViewModelSubject;
+namespace Messaging;
 
 public readonly struct Unit : IEquatable<Unit>
 {

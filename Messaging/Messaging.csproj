@@ -4,12 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <OutputType>Exe</OutputType>
-        <RootNamespace>ViewModelSubjectDemo</RootNamespace>
+        <RootNamespace>Messaging</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ViewModelSubject\ViewModelSubject.csproj" />
+        <PackageReference Include="System.ServiceModel.Primitives" Version="6.0.0" />
     </ItemGroup>
 
 </Project>

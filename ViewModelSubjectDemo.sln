@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelSubjectDemo", "ViewModelSubjectDemo\ViewModelSubjectDemo.csproj", "{6A8C55F3-54AB-4034-B26E-61497D6A461A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelMessageBusDemo", "ViewModelMessageBusDemo\ViewModelMessageBusDemo.csproj", "{6A8C55F3-54AB-4034-B26E-61497D6A461A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelSubject", "ViewModelSubject\ViewModelSubject.csproj", "{9C436048-8AB4-42B3-9886-64AED11541DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{9C436048-8AB4-42B3-9886-64AED11541DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

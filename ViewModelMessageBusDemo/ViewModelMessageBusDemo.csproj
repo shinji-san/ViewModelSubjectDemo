@@ -4,10 +4,12 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>ViewModelMessageBusDemo</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.ServiceModel.Primitives" Version="6.0.0" />
+      <ProjectReference Include="..\Messaging\Messaging.csproj" />
     </ItemGroup>
 
 </Project>
